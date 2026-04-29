@@ -1,4 +1,18 @@
 ﻿<!DOCTYPE html>
+<?php
+/** @var array<string, mixed> $usuarioActual */
+/** @var array<int, array<string, mixed>> $reservas */
+/** @var array<int, array<string, mixed>> $habitaciones */
+/** @var int $duracionMesaMinutos */
+/** @var string $horaMesaFin */
+/** @var int $intervaloMesaMinutos */
+$usuarioActual = is_array($usuarioActual ?? null) ? $usuarioActual : [];
+$reservas = is_array($reservas ?? null) ? $reservas : [];
+$habitaciones = is_array($habitaciones ?? null) ? $habitaciones : [];
+$duracionMesaMinutos = (int) ($duracionMesaMinutos ?? 0);
+$horaMesaFin = isset($horaMesaFin) ? (string) $horaMesaFin : "";
+$intervaloMesaMinutos = (int) ($intervaloMesaMinutos ?? 30);
+?>
 <html lang="es">
 
 <head>
@@ -344,4 +358,3 @@
 </body>
 
 </html>
-

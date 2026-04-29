@@ -1,4 +1,6 @@
 ﻿<?php
+/** @var array<string, mixed> $usuarioActual */
+$usuarioActual = is_array($usuarioActual ?? null) ? $usuarioActual : [];
 $esAdmin = ($usuarioActual["rol"] ?? "") === "admin";
 $saludoTopbar = $esAdmin ? "Bienvenid@, " . ($usuarioActual["nombre"] ?? "") : "Bienvenid@, " . ($usuarioActual["nombre"] ?? "");
 ?>
@@ -129,4 +131,3 @@ $saludoTopbar = $esAdmin ? "Bienvenid@, " . ($usuarioActual["nombre"] ?? "") : "
 </body>
 
 </html>
-

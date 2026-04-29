@@ -1,4 +1,22 @@
 ﻿<!DOCTYPE html>
+<?php
+/** @var array<string, mixed> $usuarioActual */
+/** @var array<int, array<string, mixed>> $reservasPendientes */
+/** @var array<string, mixed> $panelOperativo */
+/** @var string $fechaResumenTexto */
+$usuarioActual = is_array($usuarioActual ?? null) ? $usuarioActual : [];
+$reservasPendientes = is_array($reservasPendientes ?? null) ? $reservasPendientes : [];
+$panelOperativo = array_merge(
+    [
+        "total_dia" => 0,
+        "mesas_dia" => 0,
+        "habitaciones_dia" => 0,
+        "agenda_dia" => [],
+    ],
+    is_array($panelOperativo ?? null) ? $panelOperativo : []
+);
+$fechaResumenTexto = isset($fechaResumenTexto) ? (string) $fechaResumenTexto : "";
+?>
 <html lang="es">
 
 <head>
@@ -207,4 +225,3 @@
 </body>
 
 </html>
-

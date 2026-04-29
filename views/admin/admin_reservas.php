@@ -1,4 +1,16 @@
 ﻿<!DOCTYPE html>
+<?php
+/** @var array<string, mixed> $usuarioActual */
+/** @var array<int, array<string, mixed>> $reservas */
+/** @var string $busqueda */
+/** @var string $filtroTipo */
+/** @var string $filtroEstado */
+$usuarioActual = is_array($usuarioActual ?? null) ? $usuarioActual : [];
+$reservas = is_array($reservas ?? null) ? $reservas : [];
+$busqueda = isset($busqueda) ? (string) $busqueda : "";
+$filtroTipo = isset($filtroTipo) ? (string) $filtroTipo : "";
+$filtroEstado = isset($filtroEstado) ? (string) $filtroEstado : "";
+?>
 <html lang="es">
 
 <head>
@@ -199,4 +211,3 @@
 </body>
 
 </html>
-

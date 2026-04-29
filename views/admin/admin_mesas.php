@@ -1,4 +1,12 @@
 ﻿<!DOCTYPE html>
+<?php
+/** @var array<string, mixed> $usuarioActual */
+/** @var array<string, mixed> $mesaEditar */
+/** @var array<int, array<string, mixed>> $mesas */
+$usuarioActual = is_array($usuarioActual ?? null) ? $usuarioActual : [];
+$mesaEditar = is_array($mesaEditar ?? null) ? $mesaEditar : [];
+$mesas = is_array($mesas ?? null) ? $mesas : [];
+?>
 <html lang="es">
 
 <head>
@@ -158,4 +166,3 @@
 </body>
 
 </html>
-

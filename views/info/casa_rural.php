@@ -1,6 +1,7 @@
 ﻿<?php
-$usuarioActual = $usuarioActual ?? null;
-$rol = $usuarioActual["rol"] ?? "";
+/** @var array<string, mixed> $usuarioActual */
+$usuarioActual = is_array($usuarioActual ?? null) ? $usuarioActual : [];
+$rol = (string) ($usuarioActual["rol"] ?? "");
 ?>
 <!DOCTYPE html>
 <html lang="es">
