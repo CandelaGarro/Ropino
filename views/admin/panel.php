@@ -145,8 +145,7 @@
                         </div>
                     </div>
 
-                    <div class="subtitulo-tabla">Reservas del dia</div>
-
+                    <h2>Reservas del dia</h2>
                     <div class="tabla-wrap">
                         <table>
                             <thead>

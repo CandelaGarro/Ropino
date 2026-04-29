@@ -510,11 +510,6 @@ form.form-reservas button:hover {
   color: var(--color-forest-900);
 }
 
-.subtitulo-tabla {
-  font-size: 30px;
-  margin: 8px 0 18px;
-  color: var(--color-forest-900);
-}
 
 form.form-admin,
 form.form-reservas,
@@ -1585,8 +1580,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
     font-size: 28px;
   }
 
-  .bloque h2,
-  .subtitulo-tabla {
+  .bloque h2 {
     font-size: 24px;
   }
 
@@ -1688,8 +1682,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
     margin-bottom: 26px;
   }
 
-  .bloque h2,
-  .subtitulo-tabla {
+  .bloque h2 {
     font-size: 21px;
   }
 
