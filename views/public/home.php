@@ -74,7 +74,7 @@ $rol = $usuarioActual["rol"] ?? "";
                     </form>
                 <?php else: ?>
                     <div style="margin-left:auto;">
-                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
+                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesi&oacute;n</a>
                     </div>
                 <?php endif; ?>
             </header>
@@ -103,7 +103,7 @@ $rol = $usuarioActual["rol"] ?? "";
                                 <div class="home-hero__actions">
                                     <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=reservas">Reservar</a>
 
-                                    <a class="home-btn-secondary" href="#sobre-ropino">Ver informacion</a>
+                                    <a class="home-btn-secondary" href="#sobre-ropino">Ver informaci&oacute;n</a>
                                 </div>
                             </div>
 
@@ -136,16 +136,16 @@ $rol = $usuarioActual["rol"] ?? "";
                                 <h3>Casa rural para grupos</h3>
                                 <p>
                                     Alojamiento rural pensado para grupos de amigos o familias, con
-                                    salon comun acristalado, capacidad para 14 personas.
+                                    sal&oacute;n com&uacute;n acristalado, capacidad para 14 personas.
                                 </p>
                                 <ul class="home-info-list">
-                                    <li>Estancia minima: 2 noches</li>
-                                    <li>1.300 EUR por estancia</li>
-                                    <li>650 EUR/noche</li>
-                                    <li>Fianza reembolsable: 300 EUR</li>
+                                    <li>Estancia m&iacute;nima: 2 noches</li>
+                                    <li>1.300 &euro; por estancia</li>
+                                    <li>650 &euro;/noche</li>
+                                    <li>Fianza reembolsable: 300 &euro;</li>
                                 </ul>
                                 <a class="btn-ver-mas" href="<?= BASE_URL ?>/index.php?page=casa_rural">
-                                    Ver mas
+                                    Ver m&aacute;s
                                 </a>
                             </div>
                         </article>
@@ -159,16 +159,16 @@ $rol = $usuarioActual["rol"] ?? "";
                                 <h3>Apartamentos</h3>
                                 <p>
                                     Ropino ofrece tambien apartamentos en el mismo entorno, ideales
-                                    para una escapada rural con estancia minima de 2 noches.
+                                    para una escapada rural con estancia m&iacute;nima de 2 noches.
                                 </p>
                                 <ul class="home-info-list">
-                                    <li>Estancia minima: 2 noches</li>
-                                    <li>280 EUR por estancia</li>
-                                    <li>140 EUR/noche</li>
-                                    <li>Fianza reembolsable: 100 EUR</li>
+                                    <li>Estancia m&iacute;nima: 2 noches</li>
+                                    <li>280 &euro; por estancia</li>
+                                    <li>140 &euro;/noche</li>
+                                    <li>Fianza reembolsable: 100 &euro;</li>
                                 </ul>
                                 <a class="btn-ver-mas" href="<?= BASE_URL ?>/index.php?page=apartamentos">
-                                    Ver mas
+                                    Ver m&aacute;s
                                 </a>
                             </div>
                         </article>
@@ -181,37 +181,37 @@ $rol = $usuarioActual["rol"] ?? "";
                             <div class="home-info-card__body">
                                 <h3>Restaurante</h3>
                                 <p>
-                                    El restaurante cuenta con un acogedor salon y una amplia terraza,
-                                    rodeados de vegetacion y paisaje en la falda de la Sierra de Gredos.
+                                    El restaurante cuenta con un acogedor sal&oacute;n y una amplia terraza,
+                                    rodeados de vegetaci&oacute;n y paisaje en la falda de la Sierra de Gredos.
                                 </p>
                                 <ul class="home-info-list">
                                     <li>Entorno natural</li>
-                                    <li>Salon interior</li>
+                                    <li>Sal&oacute;n interior</li>
                                     <li>Terraza amplia</li>
                                     <li>Recomendable reservar con antelacion</li>
                                 </ul>
                                 <a class="btn-ver-mas" href="<?= BASE_URL ?>/index.php?page=restaurante">
-                                    Ver mas
+                                    Ver m&aacute;s
                                 </a>
                             </div>
                         </article>
                     </section>
 
                     <section class="bloque">
-                        <h2>Informacion de interes</h2>
+                        <h2>Informaci&oacute;n de inter&eacute;s</h2>
                         <div class="tabla-wrap">
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>Ubicacion</th>
-                                        <th>Telefono</th>
+                                        <th>Ubicaci&oacute;n</th>
+                                        <th>Tel&eacute;fono</th>
                                         <th>Email</th>
                                         <th>Observaciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>El Raso, Candeleda (Avila)</td>
+                                        <td>El Raso, Candeleda (&Aacute;vila)</td>
                                         <td>920 389 788</td>
                                         <td>ropinorestaurante@gmail.com</td>
                                         <td>Precios con IVA incluido. El alojamiento y los apartamentos no incluyen comidas.</td>

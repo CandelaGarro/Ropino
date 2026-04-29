@@ -71,7 +71,7 @@ $rol = $usuarioActual["rol"] ?? "";
                     </form>
                 <?php else: ?>
                     <div style="margin-left:auto;">
-                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
+                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesi&oacute;n</a>
                     </div>
                 <?php endif; ?>
             </header>
@@ -88,7 +88,7 @@ $rol = $usuarioActual["rol"] ?? "";
 
                         <div class="home-hero__overlay">
                             <div class="home-hero__content">
-                                <span class="home-badge">Salon - Terraza - Cocina tradicional</span>
+                                <span class="home-badge">Sal&oacute;n - Terraza - Cocina tradicional</span>
                                 <h1>Ropino</h1>
                                 <p>
                                     Disfruta de la cocina de Ropino en un entorno natural, con
@@ -117,12 +117,12 @@ $rol = $usuarioActual["rol"] ?? "";
                         </article>
 
                         <article class="info-card">
-                            <h2>Que encontraras</h2>
+                            <h2>Qu&eacute; encontrar&aacute;s</h2>
                             <ul class="info-list">
-                                <li>Entrantes y platos tipicos</li>
+                                <li>Entrantes y platos t&iacute;picos</li>
                                 <li>Carnes a la brasa</li>
                                 <li>Pescados</li>
-                                <li>Vinos, bebidas y cafes</li>
+                                <li>Vinos, bebidas y caf&eacute;s</li>
                                 <li>Postres caseros y helados</li>
                             </ul>
                         </article>
@@ -131,7 +131,7 @@ $rol = $usuarioActual["rol"] ?? "";
                     <section class="bloque carta-pdf-bloque">
                         <h2>Carta del restaurante</h2>
                         <p class="page-intro">
-                            Consulta la carta completa de Ropino o descargala en PDF.
+                            Consulta la carta completa de Ropino o desc&aacute;rgala en PDF.
                         </p>
 
                         <div class="carta-pdf-acciones">
@@ -167,9 +167,9 @@ $rol = $usuarioActual["rol"] ?? "";
                     </section>
 
                     <section class="bloque restaurante-galeria-bloque">
-                        <h2>Galeria de comida</h2>
+                        <h2>Galer&iacute;a de comida</h2>
                         <p class="page-intro">
-                            Una seleccion de imagenes de platos y presentaciones del restaurante.
+                            Una selecci&oacute;n de im&aacute;genes de platos y presentaciones del restaurante.
                         </p>
 
                         <div class="slider-comida" id="slider-comida">
@@ -222,7 +222,7 @@ $rol = $usuarioActual["rol"] ?? "";
                     <section class="bloque restaurante-galeria-bloque">
                         <h2>Espacios del restaurante</h2>
                         <p class="page-intro">
-                            Algunas imagenes del entorno y del propio restaurante.
+                            Algunas im&aacute;genes del entorno y del propio restaurante.
                         </p>
 
                         <div class="galeria-comida-grid">
@@ -242,16 +242,16 @@ $rol = $usuarioActual["rol"] ?? "";
                     </section>
 
                     <section class="info-cta">
-                        <h2>Quieres reservar mesa?</h2>
+                        <h2>&iquest;Quieres reservar mesa?</h2>
                         <p>
-                            Accede al sistema y realiza tu reserva indicando comensales, fecha, hora y ubicacion.
+                            Accede al sistema y realiza tu reserva indicando comensales, fecha, hora y ubicaci&oacute;n.
                         </p>
 
                         <div class="info-cta__actions">
                             <?php if ($rol === "cliente"): ?>
                                 <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=reservas">Reservar mesa</a>
                             <?php else: ?>
-                                <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
+                                <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesi&oacute;n</a>
                             <?php endif; ?>
 
                             <a class="home-btn-secondary info-btn-dark" href="<?= BASE_URL ?>/index.php?page=home">Volver al inicio</a>

@@ -71,7 +71,7 @@ $rol = $usuarioActual["rol"] ?? "";
                     </form>
                 <?php else: ?>
                     <div style="margin-left:auto;">
-                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
+                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesi&oacute;n</a>
                     </div>
                 <?php endif; ?>
             </header>
@@ -91,7 +91,7 @@ $rol = $usuarioActual["rol"] ?? "";
                                 <span class="home-badge">Casa rural - Grupos - Entorno natural</span>
                                 <h1>Ropino</h1>
                                 <p>
-                                    Una opcion pensada para grupos que buscan amplitud, privacidad
+                                    Una opci&oacute;n pensada para grupos que buscan amplitud, privacidad
                                     y una experiencia completa en plena naturaleza.
                                 </p>
                             </div>
@@ -107,50 +107,50 @@ $rol = $usuarioActual["rol"] ?? "";
 
                     <section class="info-grid">
                         <article class="info-card">
-                            <h2>2a planta</h2>
+                            <h2>2&ordf; planta</h2>
                             <ul class="info-list">
                                 <li>Disponemos de 7 habitaciones dobles, 5 de matrimonio con cama de 150 cm y 2 con dos camas de 90 cm.</li>
-                                <li>Todas las habitaciones cuentan con aseo individual con ducha, TV plana de 32", calefaccion y aire acondicionado.</li>
-                                <li>Conexion wifi gratuita en todas las habitaciones.</li>
+                                <li>Todas las habitaciones cuentan con aseo individual con ducha, TV plana de 32", calefacci&oacute;n y aire acondicionado.</li>
+                                <li>Conexi&oacute;n wifi gratuita en todas las habitaciones.</li>
                             </ul>
                         </article>
 
                         <article class="info-card">
-                            <h2>1a planta</h2>
+                            <h2>1&ordf; planta</h2>
                             <ul class="info-list">
                                 <li>Para reservas de mas de 14 personas disponemos de 4 apartamentos en planta baja.</li>
                                 <li>Cada apartamento tiene 2 habitaciones, una con cama de matrimonio de 150 cm y otra con 2 camas de 90 cm.</li>
-                                <li>Tambien incluyen aseo con ducha, salon comedor, terraza exterior, cocina, microondas, lavadora, nevera, TV, calefaccion y aire acondicionado.</li>
-                                <li>Equipamiento incluido: toallas, sabanas y menaje de cocina.</li>
+                                <li>Tambi&eacute;n incluyen aseo con ducha, sal&oacute;n comedor, terraza exterior, cocina, microondas, lavadora, nevera, TV, calefacci&oacute;n y aire acondicionado.</li>
+                                <li>Equipamiento incluido: toallas, s&aacute;banas y menaje de cocina.</li>
                             </ul>
                         </article>
                     </section>
 
                     <section class="info-grid">
                         <article class="info-card">
-                            <h2>Salon mirador</h2>
+                            <h2>Sal&oacute;n mirador</h2>
                             <p>
-                                La casa rural para grupos dispone de un salon mirador de 100 metros cuadrados,
+                                La casa rural para grupos dispone de un sal&oacute;n mirador de 100 metros cuadrados,
                                 climatizado y totalmente equipado, con barras americanas, cocinas completas,
-                                zona de estar con sofas y zona de comedor.
+                                zona de estar con sof&aacute;s y zona de comedor.
                             </p>
                         </article>
 
                         <article class="info-card">
                             <h2>Tarifas y precios</h2>
                             <ul class="info-list">
-                                <li>Estancia minima: 2 noches</li>
-                                <li>1300 EUR por estancia</li>
-                                <li>650 EUR por noche</li>
-                                <li>Fianza reembolsable: 300 EUR</li>
+                                <li>Estancia m&iacute;nima: 2 noches</li>
+                                <li>1300 &euro; por estancia</li>
+                                <li>650 &euro; por noche</li>
+                                <li>Fianza reembolsable: 300 &euro;</li>
                             </ul>
                         </article>
                     </section>
 
                     <section class="bloque restaurante-galeria-bloque">
-                        <h2>Galeria de la casa rural</h2>
+                        <h2>Galer&iacute;a de la casa rural</h2>
                         <p class="page-intro">
-                            Imagenes del alojamiento y del espacio pensado para grupos.
+                            Im&aacute;genes del alojamiento y del espacio pensado para grupos.
                         </p>
 
                         <div class="slider-comida" id="slider-comida">
@@ -189,16 +189,16 @@ $rol = $usuarioActual["rol"] ?? "";
                     </section>
 
                     <section class="info-cta">
-                        <h2>Quieres reservar la casa rural?</h2>
+                        <h2>&iquest;Quieres reservar la casa rural?</h2>
                         <p>
-                            Accede al sistema y elige la opcion de alojamiento que mejor encaje con tu grupo.
+                            Accede al sistema y elige la opci&oacute;n de alojamiento que mejor encaje con tu grupo.
                         </p>
 
                         <div class="info-cta__actions">
                             <?php if ($rol === "cliente"): ?>
                                 <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=reservas">Reservar alojamiento</a>
                             <?php else: ?>
-                                <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
+                                <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesi&oacute;n</a>
                             <?php endif; ?>
 
                             <a class="home-btn-secondary info-btn-dark" href="<?= BASE_URL ?>/index.php?page=home">Volver al inicio</a>

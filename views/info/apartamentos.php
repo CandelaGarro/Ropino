@@ -71,7 +71,7 @@ $rol = $usuarioActual["rol"] ?? "";
                     </form>
                 <?php else: ?>
                     <div style="margin-left:auto;">
-                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
+                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesi&oacute;n</a>
                     </div>
                 <?php endif; ?>
             </header>
@@ -91,9 +91,9 @@ $rol = $usuarioActual["rol"] ?? "";
                                 <span class="home-badge">Apartamentos - 4 personas - Entorno natural</span>
                                 <h1>Ropino</h1>
                                 <p>
-                                    Apartamentos independientes pensados para estancias comodas,
+                                    Apartamentos independientes pensados para estancias c&oacute;modas,
                                     tranquilas y practicas, perfectos para parejas, familias o
-                                    pequenos grupos que quieran disfrutar de la zona con mas independencia.
+                                    peque&ntilde;os grupos que quieran disfrutar de la zona con m&aacute;s independencia.
                                 </p>
                             </div>
 
@@ -108,21 +108,21 @@ $rol = $usuarioActual["rol"] ?? "";
 
                     <section class="info-grid">
                         <article class="info-card">
-                            <h2>Que ofrecen</h2>
+                            <h2>Qu&eacute; ofrecen</h2>
                             <ul class="info-list">
-                                <li>En la primera planta disponemos de 4 apartamentos con capacidad para familias o pequenos grupos.</li>
+                                <li>En la primera planta disponemos de 4 apartamentos con capacidad para familias o peque&ntilde;os grupos.</li>
                                 <li>Cada apartamento cuenta con dos habitaciones: una con cama de matrimonio de 150 cm y otra con dos camas individuales de 90 cm.</li>
-                                <li>Incluyen aseo con ducha, salon comedor amplio y cocina equipada con microondas, lavadora y nevera.</li>
-                                <li>Tambien disponen de terraza exterior, television plana, calefaccion y aire acondicionado.</li>
+                                <li>Incluyen aseo con ducha, sal&oacute;n comedor amplio y cocina equipada con microondas, lavadora y nevera.</li>
+                                <li>Tambi&eacute;n disponen de terraza exterior, televisi&oacute;n plana, calefacci&oacute;n y aire acondicionado.</li>
                             </ul>
                         </article>
 
                         <article class="info-card">
                             <h2>Equipamiento incluido</h2>
                             <ul class="info-list">
-                                <li>Toallas y sabanas limpias para la estancia.</li>
+                                <li>Toallas y s&aacute;banas limpias para la estancia.</li>
                                 <li>Menaje completo de cocina.</li>
-                                <li>Conexion wifi gratuita en todos los apartamentos.</li>
+                                <li>Conexi&oacute;n wifi gratuita en todos los apartamentos.</li>
                             </ul>
                         </article>
                     </section>
@@ -131,18 +131,18 @@ $rol = $usuarioActual["rol"] ?? "";
                         <article class="info-card">
                             <h2>Tarifas y precios</h2>
                             <ul class="info-list">
-                                <li>Estancia minima: 2 noches</li>
-                                <li>280 EUR por estancia</li>
-                                <li>140 EUR por noche</li>
-                                <li>Fianza reembolsable: 100 EUR</li>
+                                <li>Estancia m&iacute;nima: 2 noches</li>
+                                <li>280 &euro; por estancia</li>
+                                <li>140 &euro; por noche</li>
+                                <li>Fianza reembolsable: 100 &euro;</li>
                             </ul>
                         </article>
                     </section>
 
                     <section class="bloque restaurante-galeria-bloque">
-                        <h2>Galeria de apartamentos</h2>
+                        <h2>Galer&iacute;a de apartamentos</h2>
                         <p class="page-intro">
-                            Una seleccion de imagenes del alojamiento y del entorno.
+                            Una selecci&oacute;n de im&aacute;genes del alojamiento y del entorno.
                         </p>
 
                         <div class="slider-comida" id="slider-comida">
@@ -181,7 +181,7 @@ $rol = $usuarioActual["rol"] ?? "";
                     </section>
 
                     <section class="info-cta">
-                        <h2>Quieres reservar apartamento?</h2>
+                        <h2>&iquest;Quieres reservar apartamento?</h2>
                         <p>
                             Accede al sistema y selecciona el apartamento que mejor encaje con tu estancia.
                         </p>
@@ -190,7 +190,7 @@ $rol = $usuarioActual["rol"] ?? "";
                             <?php if ($rol === "cliente"): ?>
                                 <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=reservas">Reservar alojamiento</a>
                             <?php else: ?>
-                                <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
+                                <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesi&oacute;n</a>
                             <?php endif; ?>
 
                             <a class="home-btn-secondary info-btn-dark" href="<?= BASE_URL ?>/index.php?page=home">Volver al inicio</a>
