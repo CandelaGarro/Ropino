@@ -1,0 +1,10 @@
+vendor/
+*.log
+Thumbs.db
+.DS_Store
+
+config/app.local.php
+storage/mail-queue/*
+!storage/mail-queue/.gitignore
+storage/backups/*
+!storage/backups/.gitignore
