@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $usuarioActual = $usuarioActual ?? null;
 $rol = $usuarioActual["rol"] ?? "";
 ?>
@@ -9,8 +9,8 @@ $rol = $usuarioActual["rol"] ?? "";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante - Ropino</title>
-    <link rel="stylesheet" href="/RESTAURANTE-ROPINO/assets/css/styles.css">
-    <script src="/RESTAURANTE-ROPINO/assets/js/script.js"></script>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+    <script src="<?= BASE_URL ?>/assets/js/script.js"></script>
 </head>
 
 <body>
@@ -24,16 +24,16 @@ $rol = $usuarioActual["rol"] ?? "";
             <div class="menu-titulo">MENU</div>
 
             <nav class="menu">
-                <a href="/RESTAURANTE-ROPINO/index.php?page=home">Inicio</a>
+                <a href="<?= BASE_URL ?>/index.php?page=home">Inicio</a>
 
                 <?php if ($rol === "cliente"): ?>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=reservas">Mis reservas</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=mis_datos">Mis datos</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=configuracion">Configuracion</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=reservas">Mis reservas</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=mis_datos">Mis datos</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=configuracion">Configuracion</a>
                 <?php elseif ($rol === "admin"): ?>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=panel">Panel admin</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=admin_reservas">Reservas</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=reportes">Reportes</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=panel">Panel admin</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=admin_reservas">Reservas</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=reportes">Reportes</a>
                 <?php endif; ?>
             </nav>
         </aside>
@@ -65,13 +65,13 @@ $rol = $usuarioActual["rol"] ?? "";
 
                     <div class="icono-perfil">U</div>
 
-                    <form class="logout-form" action="/RESTAURANTE-ROPINO/logout.php" method="POST">
+                    <form class="logout-form" action="<?= BASE_URL ?>/logout.php" method="POST">
                         <?= csrfInput() ?>
                         <button class="btn-salir" type="submit">Cerrar sesion</button>
                     </form>
                 <?php else: ?>
                     <div style="margin-left:auto;">
-                        <a class="btn-salir" href="/RESTAURANTE-ROPINO/index.php?page=login">Iniciar sesion</a>
+                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
                     </div>
                 <?php endif; ?>
             </header>
@@ -80,10 +80,10 @@ $rol = $usuarioActual["rol"] ?? "";
                 <div class="card-principal">
                     <section class="info-hero info-hero--restaurante">
                         <div class="home-hero__media" aria-hidden="true">
-                            <div class="home-hero__slide active" style="background-image: url('/RESTAURANTE-ROPINO/assets/img/inicio/ropi1.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('/RESTAURANTE-ROPINO/assets/img/inicio/ropi2.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('/RESTAURANTE-ROPINO/assets/img/inicio/ropi3.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('/RESTAURANTE-ROPINO/assets/img/inicio/ropi4.png');"></div>
+                            <div class="home-hero__slide active" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi1.png');"></div>
+                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi2.png');"></div>
+                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi3.png');"></div>
+                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi4.png');"></div>
                         </div>
 
                         <div class="home-hero__overlay">
@@ -137,14 +137,14 @@ $rol = $usuarioActual["rol"] ?? "";
                         <div class="carta-pdf-acciones">
                             <a
                                 class="btn-reservar"
-                                href="/RESTAURANTE-ROPINO/assets/docs/CartaRopino.pdf"
+                                href="<?= BASE_URL ?>/assets/docs/CartaRopino.pdf"
                                 download="Carta-Ropino.pdf">
                                 Descargar carta
                             </a>
 
                             <a
                                 class="home-btn-secondary"
-                                href="/RESTAURANTE-ROPINO/assets/docs/CartaRopino.pdf"
+                                href="<?= BASE_URL ?>/assets/docs/CartaRopino.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer">
                                 Abrir en grande
@@ -153,12 +153,12 @@ $rol = $usuarioActual["rol"] ?? "";
 
                         <div class="pdf-carta-wrap">
                             <object
-                                data="/RESTAURANTE-ROPINO/assets/docs/CartaRopino.pdf"
+                                data="<?= BASE_URL ?>/assets/docs/CartaRopino.pdf"
                                 type="application/pdf"
                                 class="pdf-carta">
                                 <p>
                                     No se ha podido mostrar la carta en esta pantalla.
-                                    <a href="/RESTAURANTE-ROPINO/assets/docs/CartaRopino.pdf" target="_blank" rel="noopener noreferrer">
+                                    <a href="<?= BASE_URL ?>/assets/docs/CartaRopino.pdf" target="_blank" rel="noopener noreferrer">
                                         Abrir carta
                                     </a>
                                 </p>
@@ -180,25 +180,25 @@ $rol = $usuarioActual["rol"] ?? "";
                             <div class="slider-comida-viewport">
                                 <div class="slider-comida-track" id="slider-comida-track">
                                     <div class="slider-comida-slide active">
-                                        <img src="/RESTAURANTE-ROPINO/assets/img/comida/comida1.png" alt="Plato 1 de Ropino">
+                                        <img src="<?= BASE_URL ?>/assets/img/comida/comida1.png" alt="Plato 1 de Ropino">
                                     </div>
                                     <div class="slider-comida-slide">
-                                        <img src="/RESTAURANTE-ROPINO/assets/img/comida/comida2.png" alt="Plato 2 de Ropino">
+                                        <img src="<?= BASE_URL ?>/assets/img/comida/comida2.png" alt="Plato 2 de Ropino">
                                     </div>
                                     <div class="slider-comida-slide">
-                                        <img src="/RESTAURANTE-ROPINO/assets/img/comida/comida3.png" alt="Plato 3 de Ropino">
+                                        <img src="<?= BASE_URL ?>/assets/img/comida/comida3.png" alt="Plato 3 de Ropino">
                                     </div>
                                     <div class="slider-comida-slide">
-                                        <img src="/RESTAURANTE-ROPINO/assets/img/comida/comida4.png" alt="Plato 4 de Ropino">
+                                        <img src="<?= BASE_URL ?>/assets/img/comida/comida4.png" alt="Plato 4 de Ropino">
                                     </div>
                                     <div class="slider-comida-slide">
-                                        <img src="/RESTAURANTE-ROPINO/assets/img/comida/comida5.png" alt="Plato 5 de Ropino">
+                                        <img src="<?= BASE_URL ?>/assets/img/comida/comida5.png" alt="Plato 5 de Ropino">
                                     </div>
                                     <div class="slider-comida-slide">
-                                        <img src="/RESTAURANTE-ROPINO/assets/img/comida/comida6.png" alt="Plato 6 de Ropino">
+                                        <img src="<?= BASE_URL ?>/assets/img/comida/comida6.png" alt="Plato 6 de Ropino">
                                     </div>
                                     <div class="slider-comida-slide">
-                                        <img src="/RESTAURANTE-ROPINO/assets/img/comida/comida7.png" alt="Plato 7 de Ropino">
+                                        <img src="<?= BASE_URL ?>/assets/img/comida/comida7.png" alt="Plato 7 de Ropino">
                                     </div>
                                 </div>
                             </div>
@@ -227,16 +227,16 @@ $rol = $usuarioActual["rol"] ?? "";
 
                         <div class="galeria-comida-grid">
                             <figure class="galeria-comida-card">
-                                <img src="/RESTAURANTE-ROPINO/assets/img/restaurante/rest1.jpeg" alt="Espacio del restaurante 1">
+                                <img src="<?= BASE_URL ?>/assets/img/restaurante/rest1.jpeg" alt="Espacio del restaurante 1">
                             </figure>
                             <figure class="galeria-comida-card">
-                                <img src="/RESTAURANTE-ROPINO/assets/img/restaurante/rest2.jpeg" alt="Espacio del restaurante 2">
+                                <img src="<?= BASE_URL ?>/assets/img/restaurante/rest2.jpeg" alt="Espacio del restaurante 2">
                             </figure>
                             <figure class="galeria-comida-card">
-                                <img src="/RESTAURANTE-ROPINO/assets/img/restaurante/rest3.jpeg" alt="Espacio del restaurante 3">
+                                <img src="<?= BASE_URL ?>/assets/img/restaurante/rest3.jpeg" alt="Espacio del restaurante 3">
                             </figure>
                             <figure class="galeria-comida-card">
-                                <img src="/RESTAURANTE-ROPINO/assets/img/restaurante/rest4.jpeg" alt="Espacio del restaurante 4">
+                                <img src="<?= BASE_URL ?>/assets/img/restaurante/rest4.jpeg" alt="Espacio del restaurante 4">
                             </figure>
                         </div>
                     </section>
@@ -249,12 +249,12 @@ $rol = $usuarioActual["rol"] ?? "";
 
                         <div class="info-cta__actions">
                             <?php if ($rol === "cliente"): ?>
-                                <a class="btn-reservar" href="/RESTAURANTE-ROPINO/index.php?page=reservas">Reservar mesa</a>
+                                <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=reservas">Reservar mesa</a>
                             <?php else: ?>
-                                <a class="btn-reservar" href="/RESTAURANTE-ROPINO/index.php?page=login">Iniciar sesion</a>
+                                <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
                             <?php endif; ?>
 
-                            <a class="home-btn-secondary info-btn-dark" href="/RESTAURANTE-ROPINO/index.php?page=home">Volver al inicio</a>
+                            <a class="home-btn-secondary info-btn-dark" href="<?= BASE_URL ?>/index.php?page=home">Volver al inicio</a>
                         </div>
                     </section>
                 </div>
@@ -264,3 +264,4 @@ $rol = $usuarioActual["rol"] ?? "";
 </body>
 
 </html>
+

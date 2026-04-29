@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/RESTAURANTE-ROPINO/assets/css/styles.css">
-    <script src="/RESTAURANTE-ROPINO/assets/js/script.js"></script>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+    <script src="<?= BASE_URL ?>/assets/js/script.js"></script>
     <title>Gestionar mesas</title>
 </head>
 
@@ -20,13 +20,13 @@
             <div class="menu-titulo">MENU</div>
 
             <nav class="menu">
-                <a href="/RESTAURANTE-ROPINO/index.php?page=panel">Inicio</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=admin_reservas">Reservas</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=admin_habitaciones">Alojamientos</a>
-                <a class="activo" href="/RESTAURANTE-ROPINO/index.php?page=admin_mesas">Mesas</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=reportes">Reportes</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=mis_datos">Mis datos</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=configuracion">Configuracion</a>
+                <a href="<?= BASE_URL ?>/index.php?page=panel">Inicio</a>
+                <a href="<?= BASE_URL ?>/index.php?page=admin_reservas">Reservas</a>
+                <a href="<?= BASE_URL ?>/index.php?page=admin_habitaciones">Alojamientos</a>
+                <a class="activo" href="<?= BASE_URL ?>/index.php?page=admin_mesas">Mesas</a>
+                <a href="<?= BASE_URL ?>/index.php?page=reportes">Reportes</a>
+                <a href="<?= BASE_URL ?>/index.php?page=mis_datos">Mis datos</a>
+                <a href="<?= BASE_URL ?>/index.php?page=configuracion">Configuracion</a>
             </nav>
         </aside>
 
@@ -51,10 +51,10 @@
 
                 <div class="usuario-box">
                     <div class="avatar"></div>
-                    <span>Admin: <?= htmlspecialchars($usuarioActual["nombre"]) ?></span>
+                    <span>Bienvenid@, <?= htmlspecialchars($usuarioActual["nombre"]) ?></span>
                 </div>
                 <div class="icono-perfil">U</div>
-                <form class="logout-form" action="/RESTAURANTE-ROPINO/logout.php" method="POST">
+                <form class="logout-form" action="<?= BASE_URL ?>/logout.php" method="POST">
                     <?= csrfInput() ?>
                     <button class="btn-salir" type="submit">Cerrar sesion</button>
                 </form>
@@ -67,7 +67,7 @@
 
                     <div class="bloque">
                         <h2>Anadir mesa</h2>
-                        <form class="form-admin" action="/RESTAURANTE-ROPINO/src/controllers/adminMesaController.php" method="POST">
+                        <form class="form-admin" action="<?= BASE_URL ?>/src/controllers/adminMesaController.php" method="POST">
                             <?= csrfInput() ?>
                             <input type="number" name="numero" placeholder="Numero" value="<?= htmlspecialchars(oldInput("numero")) ?>" min="1" max="9999" required>
                             <input type="number" name="capacidad" min="1" max="20" placeholder="Capacidad" value="<?= htmlspecialchars(oldInput("capacidad")) ?>" required>
@@ -90,7 +90,7 @@
                     <?php if ($mesaEditar): ?>
                         <div class="bloque">
                             <h2>Editar mesa</h2>
-                        <form class="form-admin" action="/RESTAURANTE-ROPINO/src/controllers/adminMesaController.php" method="POST">
+                        <form class="form-admin" action="<?= BASE_URL ?>/src/controllers/adminMesaController.php" method="POST">
                                 <?= csrfInput() ?>
                                 <input type="hidden" name="id_mesa" value="<?= $mesaEditar["id_mesa"] ?>">
                                 <input type="number" name="numero" value="<?= htmlspecialchars(oldInput("numero", (string) $mesaEditar["numero"])) ?>" min="1" max="9999" required>
@@ -133,9 +133,9 @@
                                             <td><?= htmlspecialchars($mesa["estado"]) ?></td>
                                             <td>
                                                 <div class="acciones">
-                                                    <a class="accion-link accion-editar" href="/RESTAURANTE-ROPINO/index.php?page=admin_mesas&editar=<?= $mesa["id_mesa"] ?>">Editar</a>
+                                                    <a class="accion-link accion-editar" href="<?= BASE_URL ?>/index.php?page=admin_mesas&editar=<?= $mesa["id_mesa"] ?>">Editar</a>
 
-                                                        <form action="/RESTAURANTE-ROPINO/src/controllers/adminMesaController.php" method="POST" style="display:inline;">
+                                                        <form action="<?= BASE_URL ?>/src/controllers/adminMesaController.php" method="POST" style="display:inline;">
                                                         <?= csrfInput() ?>
                                                         <input type="hidden" name="id_mesa" value="<?= htmlspecialchars($mesa["id_mesa"]) ?>">
                                                         <button class="accion-btn accion-eliminar" type="submit" name="eliminar_mesa" value="1" onclick="return confirm('Eliminar esta mesa?')">
@@ -158,3 +158,4 @@
 </body>
 
 </html>
+

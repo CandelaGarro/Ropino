@@ -184,7 +184,7 @@ textarea {
   height: 136px;
   border-radius: 0;
   border: none;
-  background: url("/RESTAURANTE-ROPINO/assets/img/logo/logo1.jpg") center / contain no-repeat;
+  background: url("../img/logo/logo1.jpg") center / contain no-repeat;
   box-shadow: none;
   flex-shrink: 0;
 }
@@ -272,7 +272,7 @@ textarea {
   height: 42px;
   flex: 0 0 42px;
   border-radius: 12px;
-  background: url("/RESTAURANTE-ROPINO/assets/img/logo/logo2.jpg") center / contain no-repeat;
+  background: url("../img/logo/logo2.jpg") center / contain no-repeat;
   box-shadow: none;
 }
 
@@ -1275,7 +1275,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
 .info-hero--casa {
   background:
     linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
-    url("/RESTAURANTE-ROPINO/assets/img/ropino-casa-rural.jpg");
+    url("../img/salon/salon4.png");
   background-size: cover;
   background-position: center;
 }
@@ -1283,7 +1283,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
 .info-hero--apartamentos {
   background:
     linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
-    url("/RESTAURANTE-ROPINO/assets/img/ropino-hero.jpg");
+    url("../img/apartamentos/ap3.png");
   background-size: cover;
   background-position: center;
 }
@@ -1291,7 +1291,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
 .info-hero--restaurante {
   background:
     linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
-    url("/RESTAURANTE-ROPINO/assets/img/ropino-restaurante.jpg");
+    url("../img/restaurante/rest4.jpeg");
   background-size: cover;
   background-position: center;
 }

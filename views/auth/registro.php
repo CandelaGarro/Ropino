@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Ropino</title>
-    <link rel="stylesheet" href="/RESTAURANTE-ROPINO/assets/css/styles.css">
-    <script src="/RESTAURANTE-ROPINO/assets/js/script.js"></script>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+    <script src="<?= BASE_URL ?>/assets/js/script.js"></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <div class="auth-body">
                 <?php renderFlashMessages(); ?>
 
-                <form class="auth-form" action="/RESTAURANTE-ROPINO/src/controllers/usuarioController.php" method="POST">
+                <form class="auth-form" action="<?= BASE_URL ?>/src/controllers/usuarioController.php" method="POST">
                     <?= csrfInput() ?>
 
                     <div>
@@ -48,7 +48,7 @@
 
                 <div class="auth-links">
                     Ya tienes cuenta?
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=login">Inicia sesion</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=login">Inicia sesion</a>
                 </div>
 
                 <div class="auth-note">
@@ -60,3 +60,4 @@
 </body>
 
 </html>
+

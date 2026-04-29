@@ -1,11 +1,23 @@
 <?php
 
-if (!defined("BASE_URL")) {
-    define("BASE_URL", "/RESTAURANTE-ROPINO");
-}
-
 if (!defined("ROOT_PATH")) {
     define("ROOT_PATH", dirname(__DIR__, 2));
+}
+
+if (!defined("BASE_URL")) {
+    $baseUrl = "";
+
+    if (!empty($_SERVER["DOCUMENT_ROOT"])) {
+        $documentRoot = str_replace("\\", "/", realpath($_SERVER["DOCUMENT_ROOT"]) ?: $_SERVER["DOCUMENT_ROOT"]);
+        $projectRoot = str_replace("\\", "/", ROOT_PATH);
+
+        if (str_starts_with($projectRoot, $documentRoot)) {
+            $detectedBase = substr($projectRoot, strlen($documentRoot));
+            $baseUrl = $detectedBase !== false ? rtrim($detectedBase, "/") : "";
+        }
+    }
+
+    define("BASE_URL", $baseUrl);
 }
 
 /**

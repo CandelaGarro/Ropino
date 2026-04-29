@@ -2,10 +2,18 @@
 
 class Database
 {
-    private $host = "127.0.0.1";
-    private $db_name = "ropino";
-    private $username = "root";
-    private $password = "";
+    private $host;
+    private $db_name;
+    private $username;
+    private $password;
+
+    public function __construct()
+    {
+        $this->host = defined("DB_HOST") ? DB_HOST : "127.0.0.1";
+        $this->db_name = defined("DB_NAME") ? DB_NAME : "ropino";
+        $this->username = defined("DB_USERNAME") ? DB_USERNAME : "root";
+        $this->password = defined("DB_PASSWORD") ? DB_PASSWORD : "";
+    }
 
     public function connect()
     {

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/RESTAURANTE-ROPINO/assets/css/styles.css">
-    <script src="/RESTAURANTE-ROPINO/assets/js/script.js"></script>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+    <script src="<?= BASE_URL ?>/assets/js/script.js"></script>
     <title>Mis reservas</title>
 </head>
 
@@ -20,10 +20,10 @@
             <div class="menu-titulo">MENU</div>
 
             <nav class="menu">
-                <a href="/RESTAURANTE-ROPINO/index.php?page=home">Inicio</a>
-                <a class="activo" href="/RESTAURANTE-ROPINO/index.php?page=reservas">Mis reservas</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=mis_datos">Mis datos</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=configuracion">Configuracion</a>
+                <a href="<?= BASE_URL ?>/index.php?page=home">Inicio</a>
+                <a class="activo" href="<?= BASE_URL ?>/index.php?page=reservas">Mis reservas</a>
+                <a href="<?= BASE_URL ?>/index.php?page=mis_datos">Mis datos</a>
+                <a href="<?= BASE_URL ?>/index.php?page=configuracion">Configuracion</a>
             </nav>
         </aside>
 
@@ -48,12 +48,12 @@
 
                 <div class="usuario-box">
                     <div class="avatar"></div>
-                    <span>Bienvenido, <?= htmlspecialchars($usuarioActual["nombre"]) ?></span>
+                    <span>Bienvenid@, <?= htmlspecialchars($usuarioActual["nombre"]) ?></span>
                 </div>
 
                 <div class="icono-perfil">U</div>
 
-                <form class="logout-form" action="/RESTAURANTE-ROPINO/logout.php" method="POST">
+                <form class="logout-form" action="<?= BASE_URL ?>/logout.php" method="POST">
                     <?= csrfInput() ?>
                     <button class="btn-salir" type="submit">Cerrar sesion</button>
                 </form>
@@ -70,7 +70,7 @@
                             Las reservas de mesa bloquean la mesa durante <?= htmlspecialchars((string) $duracionMesaMinutos) ?> minutos y solo se pueden cancelar antes de que empiecen.
                         </p>
 
-                <form class="form-reservas" action="/RESTAURANTE-ROPINO/src/controllers/reservaController.php" method="POST">
+                <form class="form-reservas" action="<?= BASE_URL ?>/src/controllers/reservaController.php" method="POST">
                             <?= csrfInput() ?>
 
                             <?php $tipoReservaSeleccionado = oldInput("tipo_reserva"); ?>
@@ -224,7 +224,7 @@
                                                 </td>
                                                 <td>
                                                     <?php if (!empty($reserva["cancelable_cliente"])): ?>
-                                            <form action="/RESTAURANTE-ROPINO/src/controllers/reservaController.php" method="POST" style="display:inline;">
+                                            <form action="<?= BASE_URL ?>/src/controllers/reservaController.php" method="POST" style="display:inline;">
                                                             <?= csrfInput() ?>
                                                             <input type="hidden" name="id_reserva" value="<?= htmlspecialchars($reserva["id_reserva"]) ?>">
                                                             <button class="accion-btn" type="submit" name="cancelar_reserva">Cancelar</button>
@@ -344,3 +344,4 @@
 </body>
 
 </html>
+

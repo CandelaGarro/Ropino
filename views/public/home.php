@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $usuarioActual = $usuarioActual ?? null;
 $rol = $usuarioActual["rol"] ?? "";
 ?>
@@ -9,8 +9,8 @@ $rol = $usuarioActual["rol"] ?? "";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ropino</title>
-    <link rel="stylesheet" href="/RESTAURANTE-ROPINO/assets/css/styles.css">
-    <script src="/RESTAURANTE-ROPINO/assets/js/script.js"></script>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+    <script src="<?= BASE_URL ?>/assets/js/script.js"></script>
 </head>
 
 <body>
@@ -24,19 +24,19 @@ $rol = $usuarioActual["rol"] ?? "";
             <div class="menu-titulo">MENU</div>
 
             <nav class="menu">
-                <a href="/RESTAURANTE-ROPINO/index.php?page=home">Inicio</a>
+                <a href="<?= BASE_URL ?>/index.php?page=home">Inicio</a>
 
                 <?php if ($rol === "cliente"): ?>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=reservas">Mis reservas</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=mis_datos">Mis datos</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=configuracion">Configuracion</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=reservas">Mis reservas</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=mis_datos">Mis datos</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=configuracion">Configuracion</a>
                 <?php elseif ($rol === "admin"): ?>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=admin_reservas">Reservas</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=admin_habitaciones">Alojamientos</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=admin_mesas">Mesas</a>
-                    <a class="activo" href="/RESTAURANTE-ROPINO/index.php?page=reportes">Reportes</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=mis_datos">Mis datos</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=configuracion">Configuracion</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=admin_reservas">Reservas</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=admin_habitaciones">Alojamientos</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=admin_mesas">Mesas</a>
+                    <a class="activo" href="<?= BASE_URL ?>/index.php?page=reportes">Reportes</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=mis_datos">Mis datos</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=configuracion">Configuracion</a>
                 <?php endif; ?>
             </nav>
         </aside>
@@ -63,18 +63,18 @@ $rol = $usuarioActual["rol"] ?? "";
                 <?php if ($usuarioActual): ?>
                     <div class="usuario-box">
                         <div class="avatar"></div>
-                        <span>Bienvenid@: <?= htmlspecialchars($usuarioActual["nombre"]) ?></span>
+                        <span>Bienvenid@, <?= htmlspecialchars($usuarioActual["nombre"]) ?></span>
                     </div>
 
                     <div class="icono-perfil">U</div>
 
-                    <form class="logout-form" action="/RESTAURANTE-ROPINO/logout.php" method="POST">
+                    <form class="logout-form" action="<?= BASE_URL ?>/logout.php" method="POST">
                         <?= csrfInput() ?>
                         <button class="btn-salir" type="submit">Cerrar sesion</button>
                     </form>
                 <?php else: ?>
                     <div style="margin-left:auto;">
-                        <a class="btn-salir" href="/RESTAURANTE-ROPINO/index.php?page=login">Iniciar sesion</a>
+                        <a class="btn-salir" href="<?= BASE_URL ?>/index.php?page=login">Iniciar sesion</a>
                     </div>
                 <?php endif; ?>
             </header>
@@ -85,10 +85,10 @@ $rol = $usuarioActual["rol"] ?? "";
 
                     <section class="home-hero" id="home-hero">
                         <div class="home-hero__media" aria-hidden="true">
-                            <div class="home-hero__slide active" style="background-image: url('/RESTAURANTE-ROPINO/assets/img/inicio/ropi1.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('/RESTAURANTE-ROPINO/assets/img/inicio/ropi2.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('/RESTAURANTE-ROPINO/assets/img/inicio/ropi3.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('/RESTAURANTE-ROPINO/assets/img/inicio/ropi4.png');"></div>
+                            <div class="home-hero__slide active" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi1.png');"></div>
+                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi2.png');"></div>
+                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi3.png');"></div>
+                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi4.png');"></div>
                         </div>
                         <div class="home-hero__overlay">
                             <div class="home-hero__content">
@@ -101,7 +101,7 @@ $rol = $usuarioActual["rol"] ?? "";
                                 </p>
 
                                 <div class="home-hero__actions">
-                                    <a class="btn-reservar" href="/RESTAURANTE-ROPINO/index.php?page=reservas">Reservar</a>
+                                    <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=reservas">Reservar</a>
 
                                     <a class="home-btn-secondary" href="#sobre-ropino">Ver informacion</a>
                                 </div>
@@ -129,7 +129,7 @@ $rol = $usuarioActual["rol"] ?? "";
                     <section class="home-cards-grid">
                         <article class="home-info-card">
                             <img
-                                src="/RESTAURANTE-ROPINO/assets/img/salon/salon4.png"
+                                src="<?= BASE_URL ?>/assets/img/salon/salon4.png"
                                 alt="Casa rural Ropino"
                                 class="home-info-card__img">
                             <div class="home-info-card__body">
@@ -140,19 +140,19 @@ $rol = $usuarioActual["rol"] ?? "";
                                 </p>
                                 <ul class="home-info-list">
                                     <li>Estancia minima: 2 noches</li>
-                                    <li>1.300 € por estancia</li>
-                                    <li>650 €/noche</li>
-                                    <li>Fianza reembolsable: 300 €</li>
+                                    <li>1.300 EUR por estancia</li>
+                                    <li>650 EUR/noche</li>
+                                    <li>Fianza reembolsable: 300 EUR</li>
                                 </ul>
-                                <a class="btn-ver-mas" href="/RESTAURANTE-ROPINO/index.php?page=casa_rural">
-                                    Ver más
+                                <a class="btn-ver-mas" href="<?= BASE_URL ?>/index.php?page=casa_rural">
+                                    Ver mas
                                 </a>
                             </div>
                         </article>
 
                         <article class="home-info-card">
                             <img
-                                src="/RESTAURANTE-ROPINO/assets/img/apartamentos/ap3.png"
+                                src="<?= BASE_URL ?>/assets/img/apartamentos/ap3.png"
                                 alt="Apartamentos Ropino"
                                 class="home-info-card__img">
                             <div class="home-info-card__body">
@@ -163,19 +163,19 @@ $rol = $usuarioActual["rol"] ?? "";
                                 </p>
                                 <ul class="home-info-list">
                                     <li>Estancia minima: 2 noches</li>
-                                    <li>280 € por estancia</li>
-                                    <li>140 €/noche</li>
-                                    <li>Fianza reembolsable: 100 €</li>
+                                    <li>280 EUR por estancia</li>
+                                    <li>140 EUR/noche</li>
+                                    <li>Fianza reembolsable: 100 EUR</li>
                                 </ul>
-                                <a class="btn-ver-mas" href="/RESTAURANTE-ROPINO/index.php?page=apartamentos">
-                                    Ver más
+                                <a class="btn-ver-mas" href="<?= BASE_URL ?>/index.php?page=apartamentos">
+                                    Ver mas
                                 </a>
                             </div>
                         </article>
 
                         <article class="home-info-card">
                             <img
-                                src="/RESTAURANTE-ROPINO/assets/img/restaurante/rest4.jpeg"
+                                src="<?= BASE_URL ?>/assets/img/restaurante/rest4.jpeg"
                                 alt="Restaurante Ropino"
                                 class="home-info-card__img">
                             <div class="home-info-card__body">
@@ -190,8 +190,8 @@ $rol = $usuarioActual["rol"] ?? "";
                                     <li>Terraza amplia</li>
                                     <li>Recomendable reservar con antelacion</li>
                                 </ul>
-                                <a class="btn-ver-mas" href="/RESTAURANTE-ROPINO/index.php?page=restaurante">
-                                    Ver más
+                                <a class="btn-ver-mas" href="<?= BASE_URL ?>/index.php?page=restaurante">
+                                    Ver mas
                                 </a>
                             </div>
                         </article>

@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrar reservas</title>
-    <link rel="stylesheet" href="/RESTAURANTE-ROPINO/assets/css/styles.css">
-    <script src="/RESTAURANTE-ROPINO/assets/js/script.js"></script>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+    <script src="<?= BASE_URL ?>/assets/js/script.js"></script>
 </head>
 
 <body>
@@ -20,13 +20,13 @@
             <div class="menu-titulo">MENU</div>
 
             <nav class="menu">
-                <a href="/RESTAURANTE-ROPINO/index.php?page=panel">Inicio</a>
-                <a class="activo" href="/RESTAURANTE-ROPINO/index.php?page=admin_reservas">Reservas</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=admin_habitaciones">Alojamientos</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=admin_mesas">Mesas</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=reportes">Reportes</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=mis_datos">Mis datos</a>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=configuracion">Configuracion</a>
+                <a href="<?= BASE_URL ?>/index.php?page=panel">Inicio</a>
+                <a class="activo" href="<?= BASE_URL ?>/index.php?page=admin_reservas">Reservas</a>
+                <a href="<?= BASE_URL ?>/index.php?page=admin_habitaciones">Alojamientos</a>
+                <a href="<?= BASE_URL ?>/index.php?page=admin_mesas">Mesas</a>
+                <a href="<?= BASE_URL ?>/index.php?page=reportes">Reportes</a>
+                <a href="<?= BASE_URL ?>/index.php?page=mis_datos">Mis datos</a>
+                <a href="<?= BASE_URL ?>/index.php?page=configuracion">Configuracion</a>
             </nav>
         </aside>
 
@@ -51,10 +51,10 @@
 
                 <div class="usuario-box">
                     <div class="avatar"></div>
-                    <span>Admin: <?= htmlspecialchars($usuarioActual["nombre"]) ?></span>
+                    <span>Bienvenid@, <?= htmlspecialchars($usuarioActual["nombre"]) ?></span>
                 </div>
                 <div class="icono-perfil">U</div>
-                <form class="logout-form" action="/RESTAURANTE-ROPINO/logout.php" method="POST">
+                <form class="logout-form" action="<?= BASE_URL ?>/logout.php" method="POST">
                     <?= csrfInput() ?>
                     <button class="btn-salir" type="submit">Cerrar sesion</button>
                 </form>
@@ -68,7 +68,7 @@
                     <div class="bloque">
                         <h2>Filtros</h2>
 
-                        <form class="form-admin" method="GET" action="/RESTAURANTE-ROPINO/index.php">
+                        <form class="form-admin" method="GET" action="<?= BASE_URL ?>/index.php">
                             <input type="hidden" name="page" value="admin_reservas">
 
                             <input
@@ -92,7 +92,7 @@
 
                             <button type="submit">Filtrar</button>
 
-                            <a class="accion-link accion-editar" href="/RESTAURANTE-ROPINO/index.php?page=admin_reservas" style="text-align:center;">
+                            <a class="accion-link accion-editar" href="<?= BASE_URL ?>/index.php?page=admin_reservas" style="text-align:center;">
                                 Limpiar
                             </a>
                         </form>
@@ -155,27 +155,27 @@
                                                 <td>
                                                     <div class="acciones">
                                                         <?php if (($reserva["estado"] ?? "") === "pendiente"): ?>
-                                            <form action="/RESTAURANTE-ROPINO/src/controllers/adminReservaController.php" method="POST" style="display:inline;">
+                                            <form action="<?= BASE_URL ?>/src/controllers/adminReservaController.php" method="POST" style="display:inline;">
                                                                 <?= csrfInput() ?>
                                                                 <input type="hidden" name="id_reserva" value="<?= htmlspecialchars($reserva["id_reserva"]) ?>">
-                                                                <button class="accion-link accion-verde" type="submit" name="confirmar_reserva_admin" onclick="return confirm('¿Confirmar esta reserva?')">
+                                                                <button class="accion-link accion-verde" type="submit" name="confirmar_reserva_admin" onclick="return confirm('Â¿Confirmar esta reserva?')">
                                                                     Confirmar
                                                                 </button>
                                                             </form>
 
-                                            <form action="/RESTAURANTE-ROPINO/src/controllers/adminReservaController.php" method="POST" style="display:inline;">
+                                            <form action="<?= BASE_URL ?>/src/controllers/adminReservaController.php" method="POST" style="display:inline;">
                                                                 <?= csrfInput() ?>
                                                                 <input type="hidden" name="id_reserva" value="<?= htmlspecialchars($reserva["id_reserva"]) ?>">
-                                                                <button class="accion-link accion-roja" type="submit" name="cancelar_reserva_admin" onclick="return confirm('¿Cancelar esta reserva?')">
+                                                                <button class="accion-link accion-roja" type="submit" name="cancelar_reserva_admin" onclick="return confirm('Â¿Cancelar esta reserva?')">
                                                                     Cancelar
                                                                 </button>
                                                             </form>
 
                                                         <?php elseif (($reserva["estado"] ?? "") === "confirmada"): ?>
-                                            <form action="/RESTAURANTE-ROPINO/src/controllers/adminReservaController.php" method="POST" style="display:inline;">
+                                            <form action="<?= BASE_URL ?>/src/controllers/adminReservaController.php" method="POST" style="display:inline;">
                                                                 <?= csrfInput() ?>
                                                                 <input type="hidden" name="id_reserva" value="<?= htmlspecialchars($reserva["id_reserva"]) ?>">
-                                                                <button class="accion-btn" type="submit" name="cancelar_reserva_admin" onclick="return confirm('¿Cancelar esta reserva?')">
+                                                                <button class="accion-btn" type="submit" name="cancelar_reserva_admin" onclick="return confirm('Â¿Cancelar esta reserva?')">
                                                                     Cancelar
                                                                 </button>
                                                             </form>
@@ -199,3 +199,4 @@
 </body>
 
 </html>
+

@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 $esAdmin = ($usuarioActual["rol"] ?? "") === "admin";
-$saludoTopbar = $esAdmin ? "Admin: " . ($usuarioActual["nombre"] ?? "") : "Bienvenido, " . ($usuarioActual["nombre"] ?? "");
+$saludoTopbar = $esAdmin ? "Bienvenid@, " . ($usuarioActual["nombre"] ?? "") : "Bienvenid@, " . ($usuarioActual["nombre"] ?? "");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -9,8 +9,8 @@ $saludoTopbar = $esAdmin ? "Admin: " . ($usuarioActual["nombre"] ?? "") : "Bienv
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configuracion</title>
-    <link rel="stylesheet" href="/RESTAURANTE-ROPINO/assets/css/styles.css">
-    <script src="/RESTAURANTE-ROPINO/assets/js/script.js"></script>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+    <script src="<?= BASE_URL ?>/assets/js/script.js"></script>
 </head>
 
 <body>
@@ -25,17 +25,17 @@ $saludoTopbar = $esAdmin ? "Admin: " . ($usuarioActual["nombre"] ?? "") : "Bienv
 
             <nav class="menu">
                 <?php if ($esAdmin): ?>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=panel">Inicio</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=admin_reservas">Reservas</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=admin_habitaciones">Alojamientos</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=admin_mesas">Mesas</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=reportes">Reportes</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=panel">Inicio</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=admin_reservas">Reservas</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=admin_habitaciones">Alojamientos</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=admin_mesas">Mesas</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=reportes">Reportes</a>
                 <?php else: ?>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=home">Inicio</a>
-                    <a href="/RESTAURANTE-ROPINO/index.php?page=reservas">Mis reservas</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=home">Inicio</a>
+                    <a href="<?= BASE_URL ?>/index.php?page=reservas">Mis reservas</a>
                 <?php endif; ?>
-                <a href="/RESTAURANTE-ROPINO/index.php?page=mis_datos">Mis datos</a>
-                <a class="activo" href="/RESTAURANTE-ROPINO/index.php?page=configuracion">Configuracion</a>
+                <a href="<?= BASE_URL ?>/index.php?page=mis_datos">Mis datos</a>
+                <a class="activo" href="<?= BASE_URL ?>/index.php?page=configuracion">Configuracion</a>
             </nav>
         </aside>
 
@@ -65,7 +65,7 @@ $saludoTopbar = $esAdmin ? "Admin: " . ($usuarioActual["nombre"] ?? "") : "Bienv
 
                 <div class="icono-perfil">U</div>
 
-                <form class="logout-form" action="/RESTAURANTE-ROPINO/logout.php" method="POST">
+                <form class="logout-form" action="<?= BASE_URL ?>/logout.php" method="POST">
                     <?= csrfInput() ?>
                     <button class="btn-salir" type="submit">Cerrar sesion</button>
                 </form>
@@ -101,7 +101,7 @@ $saludoTopbar = $esAdmin ? "Admin: " . ($usuarioActual["nombre"] ?? "") : "Bienv
                     <section class="bloque">
                         <h2>Cambiar contrasena</h2>
 
-                    <form class="form-cuenta" action="/RESTAURANTE-ROPINO/src/controllers/cuentaController.php" method="POST">
+                    <form class="form-cuenta" action="<?= BASE_URL ?>/src/controllers/cuentaController.php" method="POST">
                             <?= csrfInput() ?>
 
                             <label for="password_actual">
@@ -129,3 +129,4 @@ $saludoTopbar = $esAdmin ? "Admin: " . ($usuarioActual["nombre"] ?? "") : "Bienv
 </body>
 
 </html>
+
