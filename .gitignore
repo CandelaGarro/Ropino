@@ -2,6 +2,7 @@ vendor/
 *.log
 Thumbs.db
 .DS_Store
+README.md
 
 config/app.local.php
 storage/mail-queue/*
