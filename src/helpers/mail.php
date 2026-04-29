@@ -1,7 +1,44 @@
 <?php
 
 require_once __DIR__ . "/../config/app.php";
-require_once ROOT_PATH . "/vendor/autoload.php";
+
+function requireMailDependencies(): void
+{
+    $autoloadPath = ROOT_PATH . "/vendor/autoload.php";
+
+    if (file_exists($autoloadPath)) {
+        require_once $autoloadPath;
+    }
+
+    if (class_exists(\PHPMailer\PHPMailer\PHPMailer::class)) {
+        return;
+    }
+
+    $candidateBases = [
+        ROOT_PATH . "/vendor/phpmailer/phpmailer/src",
+        __DIR__ . "/phpmailer",
+    ];
+
+    foreach ($candidateBases as $phpMailerBase) {
+        $requiredFiles = [
+            $phpMailerBase . "/Exception.php",
+            $phpMailerBase . "/PHPMailer.php",
+            $phpMailerBase . "/SMTP.php",
+        ];
+
+        foreach ($requiredFiles as $requiredFile) {
+            if (file_exists($requiredFile)) {
+                require_once $requiredFile;
+            }
+        }
+
+        if (class_exists(\PHPMailer\PHPMailer\PHPMailer::class)) {
+            return;
+        }
+    }
+}
+
+requireMailDependencies();
 
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -39,7 +76,7 @@ function sendEmail(string $to, string $subject, string $htmlBody, string $plainB
         $mail->AltBody = $plainBody !== "" ? $plainBody : trim(preg_replace("/\s+/", " ", strip_tags($htmlBody)));
 
         return $mail->send();
-    } catch (Exception $e) {
+    } catch (Throwable $e) {
         error_log("Error enviando email: " . $e->getMessage());
         return false;
     }
@@ -58,6 +95,11 @@ function getMailQueueFilePath(): string
 function getMailQueueWorkerLockPath(): string
 {
     return getMailQueueDirectory() . DIRECTORY_SEPARATOR . "worker.lock";
+}
+
+function getMailDebugLogPath(): string
+{
+    return getMailQueueDirectory() . DIRECTORY_SEPARATOR . "mail-debug.log";
 }
 
 function ensureMailQueueDirectory(): bool
@@ -234,8 +276,10 @@ function processQueuedEmails(int $maxBatch = MAIL_QUEUE_BATCH_SIZE): int
                     continue;
                 }
 
+                $targetEmail = (string) ($entry["to"] ?? "");
+
                 $sent = sendEmail(
-                    (string) ($entry["to"] ?? ""),
+                    $targetEmail,
                     (string) ($entry["subject"] ?? ""),
                     (string) ($entry["html_body"] ?? ""),
                     (string) ($entry["plain_body"] ?? "")
