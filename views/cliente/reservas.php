@@ -84,7 +84,7 @@ $intervaloMesaMinutos = (int) ($intervaloMesaMinutos ?? 30);
                             Las reservas de mesa bloquean la mesa durante <?= htmlspecialchars((string) $duracionMesaMinutos) ?> minutos y solo se pueden cancelar antes de que empiecen.
                         </p>
 
-                <form class="form-reservas" action="<?= BASE_URL ?>/src/controllers/reservaController.php" method="POST">
+                        <form class="form-reservas" action="<?= BASE_URL ?>/src/controllers/reservaController.php" method="POST">
                             <?= csrfInput() ?>
 
                             <?php $tipoReservaSeleccionado = oldInput("tipo_reserva"); ?>
@@ -238,7 +238,7 @@ $intervaloMesaMinutos = (int) ($intervaloMesaMinutos ?? 30);
                                                 </td>
                                                 <td>
                                                     <?php if (!empty($reserva["cancelable_cliente"])): ?>
-                                            <form action="<?= BASE_URL ?>/src/controllers/reservaController.php" method="POST" style="display:inline;">
+                                                        <form action="<?= BASE_URL ?>/src/controllers/reservaController.php" method="POST" style="display:inline;">
                                                             <?= csrfInput() ?>
                                                             <input type="hidden" name="id_reserva" value="<?= htmlspecialchars($reserva["id_reserva"]) ?>">
                                                             <button class="accion-btn" type="submit" name="cancelar_reserva">Cancelar</button>

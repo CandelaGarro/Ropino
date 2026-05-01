@@ -1,17 +1,10 @@
 :root {
-  --color-forest-950: #223028;
   --color-forest-900: #2a382d;
-  --color-forest-800: #354638;
   --color-forest-700: #49604d;
-  --color-sage-500: #809072;
   --color-terracotta-600: #b56a40;
   --color-terracotta-700: #9f5933;
   --color-wine-700: #6d3d36;
   --color-gold-400: #c9a36c;
-  --color-cream-50: #fbf7ef;
-  --color-cream-100: #f3eadc;
-  --color-cream-200: #eadcc7;
-  --color-paper: #fffaf2;
   --color-line: rgba(83, 66, 46, 0.18);
   --color-text: #342d26;
   --color-muted: #70675d;
@@ -1024,7 +1017,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   color: inherit;
 }
 
-/* HOME */
+
 .home-hero {
   position: relative;
   min-height: 380px;
@@ -1261,7 +1254,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   background: #b51217;
 }
 
-/* PÁGINAS INTERNAS INFO */
+
 .info-hero {
   position: relative;
   min-height: 320px;
@@ -1408,7 +1401,6 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* RESPONSIVE */
 @media (max-width: 1100px) {
   .home-cards-grid {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
