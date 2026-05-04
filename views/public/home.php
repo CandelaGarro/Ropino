@@ -85,14 +85,14 @@ $rol = (string) ($usuarioActual["rol"] ?? "");
                     <div class="titulo-seccion">Ropino</div>
 
                     <section class="home-hero" id="home-hero">
-                        <div class="home-hero__media" aria-hidden="true">
-                            <div class="home-hero__slide active" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi1.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi2.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi3.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi4.png');"></div>
+                        <div class="hero-img" aria-hidden="true">
+                            <div class="hero-slide active" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi1.png');"></div>
+                            <div class="hero-slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi2.png');"></div>
+                            <div class="hero-slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi3.png');"></div>
+                            <div class="hero-slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi4.png');"></div>
                         </div>
-                        <div class="home-hero__overlay">
-                            <div class="home-hero__content">
+                        <div class="hero-box">
+                            <div class="hero-text">
                                 <span class="home-badge">Casa rural · Apartamentos · Restaurante</span>
                                 <h1>Casa rural en El Raso, Candeleda</h1>
                                 <p>
@@ -101,14 +101,14 @@ $rol = (string) ($usuarioActual["rol"] ?? "");
                                     restaurante en un entorno tranquilo y acogedor.
                                 </p>
 
-                                <div class="home-hero__actions">
+                                <div class="hero-btns">
                                     <a class="btn-reservar" href="<?= BASE_URL ?>/index.php?page=reservas">Reservar</a>
 
                                     <a class="home-btn-secondary" href="#sobre-ropino">Ver informaci&oacute;n</a>
                                 </div>
                             </div>
 
-                            <div class="home-hero__dots" id="home-hero-dots">
+                            <div class="hero-dots" id="home-hero-dots">
                                 <button type="button" class="home-hero-dot active" data-index="0" aria-label="Ir a imagen 1"></button>
                                 <button type="button" class="home-hero-dot" data-index="1" aria-label="Ir a imagen 2"></button>
                                 <button type="button" class="home-hero-dot" data-index="2" aria-label="Ir a imagen 3"></button>

@@ -20,12 +20,6 @@ if (!defined("BASE_URL")) {
     define("BASE_URL", $baseUrl);
 }
 
-/**
- * Cargar configuracion local privada (NO se sube a Git)
- * Prioridad:
- * 1. C:\xampp\private\RESTAURANTE-ROPINO\app.local.php
- * 2. config/app.local.php (compatibilidad con instalaciones antiguas)
- */
 $localConfigCandidates = [
     dirname(ROOT_PATH, 2) . DIRECTORY_SEPARATOR . "private" . DIRECTORY_SEPARATOR . "RESTAURANTE-ROPINO" . DIRECTORY_SEPARATOR . "app.local.php",
     __DIR__ . DIRECTORY_SEPARATOR . "app.local.php",
@@ -38,9 +32,7 @@ foreach ($localConfigCandidates as $localConfigPath) {
     }
 }
 
-/**
- * Configuracion por defecto (para Git)
- */
+
 if (!defined("MAIL_HOST")) {
     define("MAIL_HOST", "smtp.gmail.com");
 }

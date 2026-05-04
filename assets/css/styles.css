@@ -150,18 +150,6 @@ textarea {
   line-height: 1;
 }
 
-.menu-toggle.activo .menu-toggle__line:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.menu-toggle.activo .menu-toggle__line:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.activo .menu-toggle__line:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
 .logo {
   position: relative;
   display: flex;
@@ -553,31 +541,10 @@ form.form-reservas select,
   box-shadow: inset 0 1px 2px rgba(52, 45, 38, 0.04);
 }
 
-form.form-admin input:focus,
-form.form-admin select:focus,
-form.form-reservas input:focus,
-form.form-reservas select:focus,
-.form-cuenta input:focus,
-.auth-form input:focus,
-.auth-form select:focus {
+form input:focus,
+form select:focus {
   outline: none;
-  border-color: rgba(181, 106, 64, 0.7);
-  box-shadow: 0 0 0 4px rgba(181, 106, 64, 0.14);
-}
-
-form.form-admin select,
-form.form-reservas select,
-.auth-form select {
-  appearance: none;
-  background-image:
-    linear-gradient(45deg, transparent 50%, var(--color-forest-700) 50%),
-    linear-gradient(135deg, var(--color-forest-700) 50%, transparent 50%);
-  background-position:
-    calc(100% - 18px) calc(50% - 3px),
-    calc(100% - 12px) calc(50% - 3px);
-  background-size: 6px 6px;
-  background-repeat: no-repeat;
-  padding-right: 38px;
+  border: 2px solid #b56a40;
 }
 
 .tabla-wrap {
@@ -588,21 +555,8 @@ form.form-reservas select,
   width: 100%;
   max-width: 100%;
   padding-bottom: 10px;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-x pinch-zoom;
-  overscroll-behavior-x: contain;
-  scrollbar-gutter: stable both-edges;
-  scrollbar-width: none;
   border-radius: 22px;
   box-shadow: 0 18px 34px rgba(40, 34, 28, 0.08);
-}
-
-.tabla-wrap::-webkit-scrollbar {
-  height: 0;
-}
-
-.tabla-wrap::-webkit-scrollbar-thumb {
-  background: transparent;
 }
 
 .tabla-scrollbar {
@@ -629,10 +583,6 @@ form.form-reservas select,
   background: linear-gradient(135deg, var(--color-terracotta-600), var(--color-wine-700));
   box-shadow: 0 6px 12px rgba(109, 61, 54, 0.22);
   cursor: grab;
-}
-
-.tabla-scrollbar__thumb.arrastrando {
-  cursor: grabbing;
 }
 
 .tabla-wrap table {
@@ -795,16 +745,9 @@ tbody tr:hover {
   transform: translateY(-1px);
 }
 
-form.form-reservas .check-alojamiento input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  margin: 2px 0 0;
-  padding: 0;
-  border-radius: 5px;
-  box-shadow: none;
-  accent-color: var(--color-terracotta-600);
+.check-alojamiento input[type="checkbox"] {
+  accent-color: #b56a40;
   cursor: pointer;
-  flex: 0 0 16px;
 }
 
 .check-alojamiento span {
@@ -812,11 +755,6 @@ form.form-reservas .check-alojamiento input[type="checkbox"] {
   font-size: 13px;
   line-height: 1.35;
   color: var(--color-text);
-}
-
-form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
-  color: var(--color-forest-900);
-  font-weight: 700;
 }
 
 .page-intro {
@@ -1028,50 +966,27 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   background: #314238;
 }
 
-.home-hero::after {
-  content: "";
-  position: absolute;
-  inset: auto auto 0 0;
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle, rgba(201, 163, 108, 0.26), transparent 68%);
-  pointer-events: none;
-}
-
-.home-hero__media {
+.hero-img {
   position: absolute;
   inset: 0;
 }
 
-.home-hero__media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(27, 38, 32, 0.78) 0%, rgba(41, 55, 45, 0.58) 34%, rgba(44, 34, 29, 0.28) 100%),
-    radial-gradient(circle at top right, rgba(201, 163, 108, 0.24), transparent 24%),
-    radial-gradient(circle at left 20% bottom 18%, rgba(128, 144, 114, 0.2), transparent 28%);
-}
-
-.home-hero__slide {
+.hero-slide {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: scale(1.03);
   transition:
-    opacity 0.7s ease,
-    transform 5s ease;
+    opacity 0.7s ease;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
-.home-hero__slide.active {
+.hero-slide.active {
   opacity: 1;
   transform: scale(1);
 }
 
-.home-hero__overlay {
+.hero-box {
   position: relative;
   z-index: 1;
   min-height: 380px;
@@ -1082,7 +997,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   padding: 42px;
 }
 
-.home-hero__content {
+.hero-text {
   width: 100%;
   max-width: 640px;
   color: #fff7ea;
@@ -1090,13 +1005,13 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   text-align: center;
 }
 
-.home-hero__content h1 {
+.hero-text h1 {
   margin: 0 0 14px;
   font-size: 48px;
   line-height: 1.08;
 }
 
-.home-hero__content p {
+.hero-text p {
   margin: 0;
   font-size: 18px;
   line-height: 1.7;
@@ -1117,7 +1032,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   text-transform: uppercase;
 }
 
-.home-hero__actions {
+.hero-btns {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -1125,7 +1040,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   margin-top: 24px;
 }
 
-.home-hero__dots {
+.hero-dots {
   display: flex;
   gap: 10px;
   align-self: center;
@@ -1289,25 +1204,25 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   background-position: center;
 }
 
-.info-hero__overlay {
+.info-box {
   min-height: 320px;
   display: flex;
   align-items: center;
   padding: 34px;
 }
 
-.info-hero__content {
+.info-text {
   max-width: 650px;
   color: #fff;
 }
 
-.info-hero__content h1 {
+.info-text h1 {
   margin: 0 0 14px;
   font-size: 42px;
   line-height: 1.08;
 }
 
-.info-hero__content p {
+.info-text p {
   margin: 0;
   font-size: 18px;
   line-height: 1.7;
@@ -1406,7 +1321,7 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
 
-  .home-hero__content h1 {
+  .hero-text h1 {
     font-size: 38px;
   }
 }
@@ -1506,13 +1421,13 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
     min-width: 720px;
   }
 
-  .home-hero__content h1,
-  .info-hero__content h1 {
+  .hero-text h1,
+  .info-text h1 {
     font-size: 32px;
   }
 
-  .home-hero__content p,
-  .info-hero__content p {
+  .hero-text p,
+  .info-text p {
     font-size: 16px;
   }
 }
@@ -1576,19 +1491,19 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
     font-size: 24px;
   }
 
-  .home-hero__overlay,
-  .info-hero__overlay {
+  .hero-box,
+  .info-box {
     padding: 26px;
   }
 
-  .home-hero__content h1,
-  .info-hero__content h1 {
+  .hero-text h1,
+  .info-text h1 {
     font-size: 30px;
   }
 
-  .home-hero__content p,
+  .hero-text p,
   .home-texto,
-  .info-hero__content p {
+  .info-text p {
     font-size: 16px;
   }
 
@@ -1599,12 +1514,12 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
     width: 100%;
   }
 
-  .home-hero__actions,
+  .hero-btns,
   .info-cta__actions {
     flex-direction: column;
   }
 
-  .home-hero__dots {
+  .hero-dots {
     margin-top: 18px;
   }
 
@@ -1692,14 +1607,14 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
     min-height: 300px;
   }
 
-  .home-hero__overlay,
-  .info-hero__overlay {
+  .hero-box,
+  .info-box {
     min-height: 300px;
     padding: 24px 18px;
   }
 
-  .home-hero__content h1,
-  .info-hero__content h1 {
+  .hero-text h1,
+  .info-text h1 {
     font-size: 26px;
   }
 
@@ -1713,10 +1628,10 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
     height: 190px;
   }
 
-  .home-hero__content p,
+  .hero-text p,
   .page-intro,
   .home-texto,
-  .info-hero__content p {
+  .info-text p {
     font-size: 15px;
   }
 
@@ -1779,20 +1694,20 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
     min-height: 280px;
   }
 
-  .home-hero__overlay,
-  .info-hero__overlay {
+  .hero-box,
+  .info-box {
     min-height: 280px;
     padding: 22px 16px;
   }
 
-  .home-hero__content h1,
-  .info-hero__content h1 {
+  .hero-text h1,
+  .info-text h1 {
     font-size: 23px;
   }
 
-  .home-hero__content p,
+  .hero-text p,
   .home-texto,
-  .info-hero__content p {
+  .info-text p {
     font-size: 14px;
   }
 }
@@ -1954,20 +1869,6 @@ form.form-reservas .check-alojamiento input[type="checkbox"]:checked + span {
   display: block;
   background: #fff;
   border-radius: 16px;
-}
-
-.galeria-pdf-card figcaption {
-  padding-top: 12px;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--color-forest-900);
-}
-
-.galeria-comida-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-  margin-top: 18px;
 }
 
 .galeria-comida-card {

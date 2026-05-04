@@ -80,15 +80,15 @@ $rol = (string) ($usuarioActual["rol"] ?? "");
             <main class="main">
                 <div class="card-principal">
                     <section class="info-hero info-hero--apartamentos">
-                        <div class="home-hero__media" aria-hidden="true">
-                            <div class="home-hero__slide active" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi1.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi2.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi3.png');"></div>
-                            <div class="home-hero__slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi4.png');"></div>
+                        <div class="hero-img" aria-hidden="true">
+                            <div class="hero-slide active" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi1.png');"></div>
+                            <div class="hero-slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi2.png');"></div>
+                            <div class="hero-slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi3.png');"></div>
+                            <div class="hero-slide" style="background-image: url('<?= BASE_URL ?>/assets/img/inicio/ropi4.png');"></div>
                         </div>
 
-                        <div class="home-hero__overlay">
-                            <div class="home-hero__content">
+                        <div class="hero-box">
+                            <div class="hero-text">
                                 <span class="home-badge">Apartamentos - 4 personas - Entorno natural</span>
                                 <h1>Ropino</h1>
                                 <p>
@@ -98,7 +98,7 @@ $rol = (string) ($usuarioActual["rol"] ?? "");
                                 </p>
                             </div>
 
-                            <div class="home-hero__dots" id="home-hero-dots">
+                            <div class="hero-dots" id="home-hero-dots">
                                 <button type="button" class="home-hero-dot active" data-index="0" aria-label="Ir a imagen 1"></button>
                                 <button type="button" class="home-hero-dot" data-index="1" aria-label="Ir a imagen 2"></button>
                                 <button type="button" class="home-hero-dot" data-index="2" aria-label="Ir a imagen 3"></button>
@@ -154,16 +154,16 @@ $rol = (string) ($usuarioActual["rol"] ?? "");
                             <div class="slider-comida-viewport">
                                 <div class="slider-comida-track" id="slider-comida-track">
                                     <div class="slider-comida-slide active">
-                                        <img src="<?= BASE_URL ?>/assets/img/apartamentos/ap1.png" alt="Apartamento o entorno 1">
+                                        <img src="<?= BASE_URL ?>/assets/img/apartamentos/ap1.png" alt="Apartamento1">
                                     </div>
                                     <div class="slider-comida-slide">
-                                        <img src="<?= BASE_URL ?>/assets/img/apartamentos/ap2.png" alt="Apartamento o entorno 2">
+                                        <img src="<?= BASE_URL ?>/assets/img/apartamentos/ap2.png" alt="Apartamento2">
                                     </div>
                                     <div class="slider-comida-slide">
-                                        <img src="<?= BASE_URL ?>/assets/img/apartamentos/ap4.png" alt="Apartamento o entorno 3">
+                                        <img src="<?= BASE_URL ?>/assets/img/apartamentos/ap4.png" alt="Apartamento3">
                                     </div>
                                     <div class="slider-comida-slide">
-                                        <img src="<?= BASE_URL ?>/assets/img/apartamentos/ap5.png" alt="Apartamento o entorno 4">
+                                        <img src="<?= BASE_URL ?>/assets/img/apartamentos/ap5.png" alt="Apartamento4">
                                     </div>
                                 </div>
                             </div>

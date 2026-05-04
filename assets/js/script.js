@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
     startAutoplay();
   }
 
-  const homeHeroSlides = document.querySelectorAll(".home-hero__slide");
+  const homeHeroSlides = document.querySelectorAll(".hero-slide");
   const homeHeroDots = document.querySelectorAll(".home-hero-dot");
 
   if (homeHeroSlides.length) {
